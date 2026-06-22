@@ -1,6 +1,21 @@
 # Quantifying the Spatial Drivers of Urban Heat Islands Using Tree-Based Regressors and Explainable AI (XAI)
 
-This repository contains a complete, end-to-end spatial data science framework to predict, validate, and interpret the spatial drivers of the **Urban Heat Island (UHI)** effect. The framework utilizes high-performance Tree-Based Regressors combined with **SHAP (SHapley Additive exPlanations)** to extract actionable microclimate analytics for urban planning.
+## 📌 Introduction & Project Overview
+
+Rapid urbanization and global climate change have intensified the **Urban Heat Island (UHI)** effect—a microclimatic phenomenon where metropolitan areas experience significantly elevated surface and air temperatures compared to their rural surroundings. UHIs increase energy consumption for cooling, elevate greenhouse gas emissions, compromise thermal comfort, and raise heat-related mortality rates. Understanding and mitigating these localized thermal anomalies is a primary objective for contemporary urban planners and climatologists.
+
+### The Scientific Challenge
+Historically, analyzing the spatial drivers of UHIs relied on traditional linear statistical methods (such as Ordinary Least Squares or Geographically Weighted Regression). However, the relationships between Land Surface Temperature (LST) and urban features—such as vegetation cover (NDVI), urban morphology (Building Density, Sky View Factor), and material properties (Albedo)—are highly non-linear, threshold-dependent, and involve complex interactive dynamics. 
+
+While advanced Machine Learning (ML) models like tree-based ensembles (Random Forest, XGBoost) excel at capturing these multi-dimensional, non-linear relationships with high predictive accuracy, they operate as **"black boxes."** This lack of interpretability prevents urban planners from extracting actionable, localized directives, such as: *At what threshold does increasing tree canopy coverage cease to yield additional cooling benefits?* or *How many degrees Celsius does high building density add to a specific neighborhood?*
+
+Additionally, spatial datasets exhibit **spatial autocorrelation** (First Law of Geography: nearby things are more related than distant things). Applying standard random cross-validation yields data leakage, producing overoptimistic performance metrics that fail to generalize to unseen neighborhoods.
+
+### The Solution: An Interpretable Spatial Framework
+This repository presents a robust spatial data science framework to address these challenges. By combining high-performance tree-based regressors with **Explainable AI (XAI)** based on **SHAP (SHapley Additive exPlanations)**, this project:
+1. Simulates a multi-zone urban microclimate grid with realistic spatial structures.
+2. Formulates and implements a **Spatial Block Cross-Validation (Block CV)** scheme to evaluate true model generalization on unseen geographical areas.
+3. Quantifies and maps local microclimate drivers at the pixel level (**Spatial SHAP**), turning black-box predictions into interpretable, spatially explicit policy recommendations.
 
 ---
 
