@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.agents/
+.system_generated/
+task.md
+implementation_plan.md
+walkthrough.md
